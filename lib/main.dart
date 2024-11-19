@@ -15,21 +15,39 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        
         children: <Widget>[
-          Text('text'),
-          OutlinedButton(onPressed: () {},
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Colors.red[500],
+          Row(
+            children: <Widget>[
+              Text('Tekst'),
+              ElevatedButton(onPressed: () {
+                print('you have clicked this button!');
+              },
+                  child: Text('Click me'),
+                style: ElevatedButton.styleFrom(
+                  shadowColor: Colors.red,
+                  backgroundColor: Colors.yellow,
+                ),
               ),
-              child: Text('button')
+            ],
           ),
           Container(
-            color: Colors.amber[200],
-            padding: EdgeInsets.all(20),
-            child: Text('Container'),
+            padding: EdgeInsets.all(20.0),
+            color: Colors.amber,
+            child: Text('One'),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.green,
+            child: Text('Two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.orange,
+            child: Text('Three'),
           ),
         ],
       ),
