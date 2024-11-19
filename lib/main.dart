@@ -15,26 +15,13 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {
-            print('u clicked me');
-          },
-          icon: Icon(
-            Icons.mail,
-            color: Colors.black,
-          ),
-          label: Text('email us',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.amber, // Postavlja osnovnu boju gumba
-          ),
-        ),
+      body: Padding(
+        padding: EdgeInsets.all(90),
+        child: Text('text'),
       ),
-      floatingActionButton: FloatingActionButton( onPressed: () {},
+      floatingActionButton: FloatingActionButton( onPressed: () {
+        print('u clicked me!');
+      },
         child: Text('click'),
         backgroundColor: Colors.red[600],
       ),
