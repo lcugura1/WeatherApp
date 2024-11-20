@@ -15,42 +15,39 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        
+      body: Row(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text('Tekst'),
-              ElevatedButton(onPressed: () {
-                print('you have clicked this button!');
-              },
-                  child: Text('Click me'),
-                style: ElevatedButton.styleFrom(
-                  shadowColor: Colors.red,
-                  backgroundColor: Colors.yellow,
-                ),
-              ),
-            ],
+          Expanded(
+            flex: 3,
+              child: Image.asset('assets/space1.jpg')
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.amber,
-            child: Text('One'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.orange,
+              child: Text('one'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.green,
-            child: Text('Two'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.red,
+              child: Text('two'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.orange,
-            child: Text('Three'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('three'),
+            ),
           ),
         ],
       ),
+
       floatingActionButton: FloatingActionButton( onPressed: () {
         print('u clicked me!');
       },
